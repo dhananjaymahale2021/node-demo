@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "e4a77f97-fc76-45a5-ad1d-a6fa033d21b3",
+		"name": "internalExam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				},
+				"description": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ananta\",\r\n    \"class\": \"FYBSC\",\r\n    \"division\": \"6\",\r\n    \"dob\": \"2016-09-16\",\r\n    \"parentMobileNo\": \"7845464646\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				},
+				"description": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all students of particular birth year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/students?birthYear=2016",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "class",
+							"value": "Fybsc",
+							"disabled": true
+						},
+						{
+							"key": "rollNo",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "birthYear",
+							"value": "2016"
+						}
+					]
+				},
+				"description": "localhost:3000/students?class=Fybsc"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all students of by class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/students?class=Fybsc",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "class",
+							"value": "Fybsc"
+						},
+						{
+							"key": "rollNo",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "birthYear",
+							"value": "2016",
+							"disabled": true
+						}
+					]
+				},
+				"description": "localhost:3000/students?class=Fybsc"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/students/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"1"
+					]
+				},
+				"description": "localhost:3000/students/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Find student by roll no",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/students/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"3"
+					]
+				},
+				"description": "localhost:3000/students/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit specific Student's class and division",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"class\": \"FYBSC\",\r\n    \"division\": \"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"5"
+					]
+				},
+				"description": "http://localhost:3000/students"
+			},
+			"response": []
+		}
+	]
+}
