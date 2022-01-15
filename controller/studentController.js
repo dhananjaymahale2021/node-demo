@@ -1,3 +1,5 @@
+const dbConnection = require('../helpers/dbConnection');
+
 const getStudents = async (request, response) => {
   const connection = dbConnection.getConnection();
   let statement = "";
