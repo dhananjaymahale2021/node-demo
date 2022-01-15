@@ -1,0 +1,13 @@
+version: '3'
+services:
+  
+
+  server:
+    # find the Dockerfile in ./backend to build the image
+    build: ../node-demo
+    ports:
+      - 3000:3000
+
+  db:
+    # find the Dockerfile in ./db to build the image
+    build: ./db
